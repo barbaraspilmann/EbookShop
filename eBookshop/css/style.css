@@ -1,0 +1,228 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    background-color: #ececec;
+}
+
+/* Header styling */
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #9dbea2;
+}
+
+header nav .logo {
+    flex-shrink: 0;
+    margin-right: 0px;
+}
+
+header nav .logo img {
+    height: auto;
+    width: 100px;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #dfdfdf; /* Light gray background */
+    text-align: center; /* this will center links horizontally */
+    
+}
+
+header nav ul li {
+    display: inline-block; /* this display the list items inline */
+    margin-right: -4px; /* lets removes the gap */
+    
+}
+
+header nav ul li a {
+    display: block;
+    padding: 20px 30px; /* this will larger padding for better clickability */
+    text-decoration: none;
+    color: #333; /* dark gray text color*/
+    font-size: 16px; /* slightly larger font size for readability */
+    border-right: 3px solid #0c6900; /* adds a separator between items */
+    transition: background-color 0.3s, color 0.4s; /* change the transition for hover effects */
+    
+}
+
+
+header nav ul li:last-child a { /* it will reemoves the border for the last item */
+    border-right: none;
+}
+
+
+header nav ul li a:hover, /* for hover and focus effects */
+header nav ul li a:focus {
+    background-color: #e9e9e9; /* change the background on hover */
+    color: #000; /* darker the text color on hover for better visibility */
+}
+
+
+header nav ul li a.active { /* active link styling */
+    background-color: #e1e1e1; /* darker background */
+    color: #000; /* text color is black for active link */
+}
+
+
+
+.container { /* the main styling */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#featured-books {
+    text-align: center; /* here we center the text of the heading */
+    font-family:monospace;
+    color: #4f8a47;
+}
+
+.book {
+    display: flex;
+    width: 100%; /* here we takes full width to accommodate both image and text side by side */
+    max-width: 600px; /* to change the width can be adjusted based on design preference */
+    margin: 20px auto; /* centers the book div and provides spacing around it */
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.book img {
+    width: 40%; /* adjusting to take up 40% of the book div width */
+    height: auto;
+    object-fit: cover; /* image covers the set area without distortion */
+}
+
+.book div {
+    width: 60%; /*  to take up 60% of the book div width */
+    padding: 20px; /* for spacing inside the text div */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* put some space between text and button */
+    
+}
+
+.book div p, 
+.book div b {
+    text-align: center; /* to put the text in the center and bold price */
+    margin: 5px 0; /* to add a littleee space between text lines */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0e5836;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    align-self: center; /* to center the button inside its container */
+}
+
+button:hover {
+    background-color: #225c27;
+}
+
+
+.payment-form { /* for better appearanceeee */
+    background-color: #d0d3d1;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+/* for all input fields and labels */
+.payment-form input,
+.payment-form select,
+.payment-form button {
+    align-items: center;
+    width: 100%; /* full width input fields */
+    padding: 10px;
+    margin-top: 8px; /* space above the input area */
+    margin-bottom: 16px; /* space below the input area */
+    box-sizing: border-box; /* add padding and border in the element's total width and height */
+}
+
+.payment-form label {
+    display: block; /* make sure the label is full-width */
+    text-align: left; /* aligns the label text to the left */
+    margin-bottom: 5px; /* little space between label and input field */
+}
+
+
+.payment-form button {
+    background-color: #0e5836;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-form button:hover {
+    background-color: #225c27; /* darker shade on hover */
+}
+
+.payment-form div p, 
+.payment-form div b {
+    text-align: left; /* centers the text of paragraph and bold price */
+    margin: 5px 0; /* adds a littleeee space between text lines */
+    font-size: small;
+  
+}
+
+.card-icon {
+    width: 70px; 
+    height: auto; 
+}
+
+
+@media (max-width: 600px) {
+    .book, header nav, header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    header nav .logo img {
+        width: 80px;
+    }
+    .book {
+        width: 100%; /* put full width on smaller screens */
+        flex-direction: column; /* put the items vertically */
+    }
+    .book img, .book div {
+        flex: none; 
+        width: 100%; /* full width  */
+        max-width: 100%; /* image does not exceed the container */
+        text-align: center; 
+    }
+    @media (max-width: 600px) {
+        .payment-form {
+            text-align: center;
+            padding: 0px; 
+        }
+    }
+    .card-icon {
+        width: 8vw; 
+    }
+
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #9dbea2;
+    color: white;
+}

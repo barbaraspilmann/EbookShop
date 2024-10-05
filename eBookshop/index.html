@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- welcome to my eBookShop ;) -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbara's eBookShop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/eBookShop-logo-nobackground.png" alt="eBookshop Logo" title="Go to the eBookshop Home Page">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="books" aria-labelledby="featured-books">
+            <h2 id="featured-books">Featured Books</h2>
+            <div class="container">
+                <article class="book">
+                    <img src="images/book1.jpg" alt="Cover of 'Learn Python in One Day and Learn It Well'">
+                    <div>
+                        <h3>Learn Python in One Day and Learn It Well (2nd Edition) by Jamie Chan</h3>
+                        <p>Paperback<br>464 Pages<br>Published: 29/02/2024</p>
+                        <p><strong>£14.99</strong></p>
+                        <button onclick="location.href='pay.html'">Buy Now</button>
+                    </div>
+                </article>
+                <article class="book">
+                    <img src="images/book2.jpg" alt="Cover of 'AI Needs You'">
+                    <div>
+                        <h3>AI Needs You by Verity Harding</h3>
+                        <p>Paperback<br>464 Pages<br>Published: 29/02/2024</p>
+                        <p><strong>£14.99</strong></p>
+                        <button onclick="location.href='pay.html'">Buy Now</button>
+                    </div>
+                </article>
+                <article class="book">
+                    <img src="images/book3.jpg" alt="Cover of 'The Rust Programming Language: 2nd Edition'">
+                    <div>
+                        <h3>The Rust Programming Language: 2nd Edition by Steve Klabnik</h3>
+                        <p>Paperback<br>464 Pages<br>Published: 29/02/2024</p>
+                        <p><strong>£14.99</strong></p>
+                        <button onclick="location.href='pay.html'">Buy Now</button>
+                    </div>
+                </article>
+                <article class="book">
+                    <img src="images/book4.jpg" alt="Cover of 'The Staff Engineer's Path'">
+                    <div>
+                        <h3>The Staff Engineer's Path by Tanya Reilly</h3>
+                        <p>Paperback<br>464 Pages<br>Published: 29/02/2024</p>
+                        <p><strong>£14.99</strong></p>
+                        <button onclick="location.href='pay.html'">Buy Now</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Barbara's eBookShop. All rights reserved.</p>
+    </footer>
+    <script src="payment.js"></script>
+</body>
+</html>
+

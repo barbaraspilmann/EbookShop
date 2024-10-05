@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options - Barbara's eBookShop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/eBookShop-logo-nobackground.png" alt="eBookshop Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="payment-form">
+            <h1>Payment</h1>
+            <h3>Debit/Credit Card</h3> 
+            <img src="images/mastercard-icon.png" alt="Mastercard-Logo" class="card-icon">
+            <img src="images/creditcard-icon.png" alt="creditcard-icon" class="card-icon">
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" pattern="\d*" maxlength="16" required placeholder="Enter 16-digit card number">
+                </div>
+                <div class="form-group">
+                    <label for="expiryMonth">Expiration Date</label>
+                    <select id="expiryMonth" required>
+                        <option value="">Month</option>
+                        <!-- month options that will be used by the JS -->
+                    </select>
+                    <select id="expiryYear" required>
+                        <option value="">Year</option>
+                        <!-- year options that will be used by the JS -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">Security Code</label>
+                    <input type="text" id="cvv" pattern="\d*" maxlength="4" required placeholder="Enter 3 or 4-digit CVV">
+                    <p><i>(3-4 digit code normally on the back of your card)</i></p>
+                </div>
+                <button type="submit">Continue</button>
+            </form>
+            <div id="message"></div>
+        </section>
+    </main>
+    <script src="js/payment.js"></script> 
+    <!-- this path links the page to the correct js file -->
+    <footer>
+        <p>© 2024 Barbara's eBookShop. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success - Barbara's eBookShop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/eBookShop-logo-nobackground.png" alt="eBookshop Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="success-message">
+            <h1>You have successfully entered your credit card details</h1>
+            <p id="cardDigitsMessage">Your credit card number ends in</p>
+        </section>
+    </main>
+    <script>
+        window.onload = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lastFourDigits = urlParams.get('cardNumber'); // take the last 4 digits
+            const messageElement = document.getElementById('cardDigitsMessage');
+            if (messageElement && lastFourDigits) {
+                messageElement.textContent = `Your credit card number ends in **** **** **** ${lastFourDigits}`;
+            }
+        }
+        </script>
+
+<script src="payment.js"></script>
+<footer>
+    <p>© 2024 Barbara's eBookShop. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
